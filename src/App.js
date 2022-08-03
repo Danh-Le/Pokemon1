@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useState } from "react";
+import "./App.css";
 
 const App = () => {
   const [pokemon, setPokemon] = useState(null);
@@ -31,20 +32,22 @@ const App = () => {
     <div></div>;
   } else
     return (
-      <div className="">
-        <img src={pokemon.sprites.front_default} alt="pokemonPic" />
-        <h1>{pokemon.name}</h1>
-        <p>Height: {pokemon.height}</p>
-        <p>Weight: {pokemon.weight}</p>
-        {pokemon.types.map((type) => {
-          return (
-            <>
-              <p>Types: {type.type.name}</p>
-            </>
-          );
-        })}
-        <button onClick={handleRandomClick}>Random pokemon</button>
-      </div>
+      <section className="poke">
+        <div className="card">
+          <img src={pokemon.sprites.front_default} alt="pokemonPic" />
+          <h1>{pokemon.name}</h1>
+          <p>Height: {pokemon.height}</p>
+          <p>Weight: {pokemon.weight}</p>
+          {pokemon.types.map((type) => {
+            return (
+              <>
+                <p>Types: {type.type.name}</p>
+              </>
+            );
+          })}
+          <button onClick={handleRandomClick}>Random pokemon</button>
+        </div>
+      </section>
     );
 };
 

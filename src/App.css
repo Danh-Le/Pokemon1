@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 10% 40%;
+  background-color: antiquewhite;
+
+}
+.card img {
+  width: 200px;
+}
+.card button {
+  width: 70%;
+  border-radius: 5%;
+  margin: 30px;
+  background-color: red;
+}
+/* .poke {
+  background-image: url("./pokemon.jpg");
+} */
